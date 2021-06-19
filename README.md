@@ -4,7 +4,7 @@
 
  Author  : Kouji Nakashima / kuc-arc-f.com
 
- date    : 2021/06/18 
+ date    : 2021/06/18
 
  update  :
 
