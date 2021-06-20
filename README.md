@@ -6,7 +6,7 @@
 
  date    : 2021/06/18
 
- update  :
+ update  : 2021/06/20
 
 ***
 ### Summary
@@ -21,6 +21,14 @@ npm install
 * start
 
 yarn dev
+
+***
+* Table : authors, articles
+
+doc/db/articles
+
+doc/db/authors.sql
+
 
 ***
 ### Blog :

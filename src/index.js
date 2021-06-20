@@ -22,9 +22,13 @@ const resolvers = {
     book: async function (parent, args, context, info){
       return await LibBooks.get_book(args.id);
     },
-    articles : async () => {
-      return await LibArticles.get_items()
-    }, 
+    articles : async (parent, args, context, info) => {
+// console.log(args)
+      return await LibArticles.get_items(args.page)
+    },
+    article : async (parent, args, context, info) => {
+      return await LibArticles.get_item(args.id);
+    },
     authors : async () => {
       return await LibAuthors.get_items()
     }, 

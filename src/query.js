@@ -7,7 +7,8 @@ export const GQL_QUERY = `
     todo(id: Int): Todo
     books: [Book]
     book(id: Int): Book
-    articles: [Article]
+    articles(page: Int): [Article]
+    article(id: Int): Article
     authors: [Author]
     users: [User]    
   }

@@ -7,7 +7,7 @@ query {
 }
 ***
 query {
-  articles {
+  articles(page: 1) {
     id
     title
     author {
@@ -16,6 +16,18 @@ query {
     }    
   }
 }
+***
+query {
+  article(id: 1){
+    id
+    title
+    author {
+      id
+      name
+    }     
+  }
+}
+***
 query {
   authors {
     id
