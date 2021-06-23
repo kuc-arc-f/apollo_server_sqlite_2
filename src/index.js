@@ -4,6 +4,7 @@ import LibTodos from '../lib/LibTodos'
 import LibBooks from '../lib/LibBooks'
 import LibArticles from '../lib/LibArticles'
 import LibAuthors from '../lib/LibAuthors'
+import LibSessions from '../lib/LibSessions'
 import {typeDefs} from './scheme'
 
 //
@@ -32,6 +33,10 @@ const resolvers = {
     authors : async () => {
       return await LibAuthors.get_items()
     }, 
+    sessions : async () => {
+      return await LibSessions.get_items()
+    },    
+
   },
   Mutation: {
     addTodo: async (parent, args, context) => {
@@ -67,7 +72,14 @@ const resolvers = {
       var ret = await LibArticles.add_item(args)
       ret.id = 0
       return ret
-    },    
+    }, 
+    addSession: async (parent, args, context) => {
+//      var ret = args
+      var ret = await LibSessions.add_item(args)
+      ret.id = 0
+      return args
+    }, 
+
   }
 };
 

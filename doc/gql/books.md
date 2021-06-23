@@ -9,6 +9,7 @@ query {
 query {
   books {
     id
+    user_id
     title
     content
     category_id
@@ -29,6 +30,7 @@ query {
 ***
 mutation add {
   addBook(
+    user_id: 1,
     title: "book6", content: "cont", category_id: 1 ,
     radio_1: 1, check_1: "", date_1:""
     ) {

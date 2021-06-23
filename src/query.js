@@ -10,6 +10,7 @@ export const GQL_QUERY = `
     articles(page: Int): [Article]
     article(id: Int): Article
     authors: [Author]
-    users: [User]    
+    users: [User]
+    sessions: [Session]    
   }
 `;

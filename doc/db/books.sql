@@ -3,6 +3,7 @@ drop table books;
 ---
 create table books(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER,
   title TEXT,
   content TEXT,
   category_id INTEGER,

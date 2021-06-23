@@ -18,6 +18,7 @@ export const typeDefs = gql`
   }  
   type Book {
     id: Int!
+    user_id: Int
     title: String
     content: String
     category_id: Int!
@@ -31,6 +32,11 @@ export const typeDefs = gql`
     email: String
     password: String
   } 
+  type Session{
+    id: Int!
+    user_id: Int
+    jsondata: String
+  }
   ${GQL_QUERY}
   ${GQL_MUTATION}
 `;
